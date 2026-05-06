@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { assetPath } from "@/lib/config";
 
 type Props = {
   variant?: "full" | "compact";
@@ -25,7 +26,7 @@ export function Logo({ variant = "full", className = "" }: Props) {
         style={{ width: size, height: size }}
       >
         <Image
-          src="/logo.png"
+          src={assetPath("/logo.png")}
           alt=""
           fill
           priority

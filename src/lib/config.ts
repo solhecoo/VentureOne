@@ -19,6 +19,11 @@ export const siteConfig = {
   },
 } as const;
 
+export function assetPath(path: string): string {
+  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  return `${base}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
 export function hasWhatsApp(): boolean {
   return Boolean(siteConfig.whatsapp.url || siteConfig.whatsapp.number);
 }
