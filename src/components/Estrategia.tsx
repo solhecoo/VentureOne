@@ -52,7 +52,7 @@ export function Estrategia() {
   const prefersReduced = useReducedMotion();
 
   return (
-    <section id="estrategia" className="scroll-mt-24 py-24 md:py-36">
+    <section id="estrategia" className="scroll-mt-24 py-24 md:py-36 overflow-hidden">
       <div className="container-v1">
         <Reveal direction="fade">
           <div className="bordered-card grain px-7 py-12 md:px-14 md:py-16">
