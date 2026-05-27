@@ -10,9 +10,9 @@ import { SplitText } from "./animations/SplitText";
 import { useCursorHover } from "./providers/CursorProvider";
 
 const STATS = [
-  { label: "Ciclo promedio", value: "4–6", unit: "meses" },
-  { label: "Foco", value: "Estratos", unit: "4 · 5" },
-  { label: "Mercado", value: "Medellín", unit: "" },
+  { label: "Rentabilidad inversionista", value: "27–32%", unit: "EA*" },
+  { label: "Meses ciclo", value: "4–6", unit: "" },
+  { label: "COP ejecutados", value: "$891MM", unit: "" },
 ];
 
 export function Hero() {
@@ -116,7 +116,7 @@ export function Hero() {
                   rel="noopener noreferrer"
                   className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-ink px-7 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-cream transition"
                 >
-                  <span className="relative z-10">Hablar con un asesor</span>
+                  <span className="relative z-10">Acceder a oportunidades</span>
                   <span className="relative z-10 inline-block transition group-hover:translate-x-1">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.8">
                       <path d="M3 7H11M11 7L7.5 3.5M11 7L7.5 10.5" />
@@ -131,7 +131,7 @@ export function Hero() {
                 className="group inline-flex items-center gap-3 rounded-full border border-ink/20 px-7 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-ink transition hover:border-ink"
               >
                 <span className="block size-1.5 rounded-full bg-accent transition group-hover:scale-150" />
-                Conocer estrategia
+                Conocer tesis
               </Link>
             </motion.div>
           </div>
@@ -188,7 +188,7 @@ export function Hero() {
             hidden: {},
             visible: { transition: { staggerChildren: 0.12, delayChildren: 1.3 } },
           }}
-          className="mt-24 grid grid-cols-3 gap-6 border-t border-ink/10 pt-10 md:gap-12"
+          className="mx-auto mt-24 grid max-w-4xl grid-cols-3 gap-6 border-t border-ink/10 pt-10 text-center md:gap-12"
         >
           {STATS.map((s) => (
             <motion.div
@@ -201,7 +201,7 @@ export function Hero() {
                   transition: { duration: 0.6, ease: [0.2, 0.7, 0.2, 1] },
                 },
               }}
-              className="flex flex-col gap-3"
+              className="flex flex-col items-center gap-3"
             >
               <dt className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted">
                 {s.label}

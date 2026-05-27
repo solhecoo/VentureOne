@@ -14,7 +14,7 @@ export function ContactoCTA() {
   return (
     <section
       id="acceso-inversionistas"
-      className="scroll-mt-24 py-24 md:py-32"
+      className="scroll-mt-24 py-24 md:py-32 overflow-hidden"
     >
       <div className="container-v1">
         <Reveal direction="fade">
