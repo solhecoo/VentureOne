@@ -20,7 +20,7 @@ export default function Home() {
           items={[
             "Sourcing",
             "Transformación",
-            "Liquidez",
+            "Rentabilidad",
             "Medellín",
             "Estratos 4 · 5",
             "Ciclos 4–6 meses",
