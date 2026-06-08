@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
 import { useRef } from "react";
 import { buildWhatsAppUrl } from "@/lib/config";
-import { ParallaxImage } from "./animations/Parallax";
+import { BeforeAfter } from "./BeforeAfter";
 import { Magnetic } from "./animations/Magnetic";
 import { SplitText } from "./animations/SplitText";
 import { useCursorHover } from "./providers/CursorProvider";
@@ -18,7 +18,6 @@ const STATS = [
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const prefersReduced = useReducedMotion();
-  const viewHover = useCursorHover("VER");
   const ctaHover = useCursorHover();
 
   const { scrollYProgress } = useScroll({
@@ -32,7 +31,6 @@ export function Hero() {
     prefersReduced ? [0, 0] : [0, -120],
   );
   const titleOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.06]);
   const imageY = useTransform(
     scrollYProgress,
     [0, 1],
@@ -137,32 +135,20 @@ export function Hero() {
           </div>
 
           <motion.div
-            style={{ y: imageY, scale: imageScale }}
+            style={{ y: imageY }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.3 }}
-            className="relative min-h-[480px] md:min-h-[680px]"
+            className="relative h-[480px] md:h-[680px]"
           >
-            <div
-              {...viewHover}
-              className="absolute inset-0 overflow-hidden rounded-[6px] shadow-[var(--shadow-card)]"
-            >
-              <ParallaxImage
-                src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1600&q=80"
-                alt="Interior residencial de alta gama en Medellín"
-                priority
-                sizes="(max-width: 768px) 100vw, 55vw"
-                intensity={70}
-                scale={1.18}
-                className="h-full w-full"
-              />
-              <motion.div
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 1.4, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute bottom-0 left-0 right-0 h-1 origin-left bg-cream"
-              />
-            </div>
+            <BeforeAfter
+              beforeSrc="/antes.jpg"
+              afterSrc="/despues.jpg"
+              beforeAlt="Apartamento en El Poblado antes de la transformación"
+              afterAlt="Apartamento en El Poblado después de la transformación"
+              priority
+              className="h-full w-full rounded-[6px] shadow-[var(--shadow-card)]"
+            />
 
             <motion.div
               initial={{ opacity: 0, y: 24 }}

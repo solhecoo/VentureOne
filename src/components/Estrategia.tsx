@@ -63,20 +63,20 @@ export function Estrategia() {
                 </Reveal>
                 <h2 className="heading-display mt-5 text-[clamp(2.5rem,7vw,6rem)] leading-[0.92] text-ink">
                   <SplitText
-                    text="Arbitraje en"
+                    text="Captura de valor"
                     inView
                     className="block"
                     staggerChildren={0.05}
                   />
                   <SplitText
-                    text="real estate:"
+                    text="urbano:"
                     inView
                     className="block"
                     delay={0.1}
                   />
                   <span className="block">
                     <SplitText
-                      text="comprar, transformar, salir."
+                      text="estrategia, ejecución, retorno."
                       inView
                       className="serif-italic block text-accent text-[0.92em]"
                       delay={0.22}
@@ -87,8 +87,9 @@ export function Estrategia() {
               </div>
               <Reveal delay={0.4} direction="left">
                 <p className="text-sm font-medium uppercase tracking-[0.16em] leading-relaxed text-muted md:text-right">
-                  Aprovechamos las ineficiencias del mercado secundario en
-                  estratos 4 y 5 de Medellín.
+                  Maximizamos el rendimiento del capital mediante la
+                  identificación y optimización de activos inmobiliarios en los
+                  sectores de mayor plusvalía.
                 </p>
               </Reveal>
             </div>
